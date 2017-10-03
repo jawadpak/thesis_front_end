@@ -5,14 +5,14 @@ import { TitleCasePipe } from '@angular/common';
   selector: 'app-foodmeal',
   templateUrl: './foodmeal.component.html',
   styleUrls: ['./foodmeal.component.css'],
-  
+
 })
 export class FoodmealComponent implements OnInit {
   @Input() userMealPlan: UserMealPlan;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.userMealPlan);
+    //console.log(this.userMealPlan);
   }
 
 }

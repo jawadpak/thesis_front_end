@@ -21,6 +21,7 @@
               <th>NutritionFact</th>
               <th>Favourite</th>
               <th>Change</th>
+              <th>Chart</th>
               <th>Delete</th>
 
             </tr>
@@ -35,28 +36,18 @@
               </td>
               <td>
                 <!-- <span class="fa fa-info">  </span> -->
-                <button md-icon-button [mdMenuTriggerFor]="menu">
-                  <md-icon>info</md-icon>
-                </button>
-                <md-menu #menu="mdMenu">
-                  <button md-menu-item>
-                    <md-icon>dialpad</md-icon>
-                    <span>Redial</span>
-                  </button>
-                  <button md-menu-item disabled>
-                    <md-icon>voicemail</md-icon>
-                    <span>Check voicemail</span>
-                  </button>
-                  <button md-menu-item>
-                    <md-icon>notifications_off</md-icon>
-                    <span>Disable alerts</span>
-                  </button>
-                </md-menu>
+                <app-foodnutrition [foodNutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-foodnutrition>
 
               </td>
               <td><span class="fa fa-heart">  </span></td>
               <td><span class="fa fa-refresh">  </span></td>
-              <td><span class="fa fa-times-circle">  </span></td>
+              <td>
+                <app-personcard [title]="userMealPlan.meal_item.name | titlecase" [nutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-personcard>
+              </td>
+
+              <td>
+                <md-icon>delete_forever</md-icon>
+              </td>
             </tr>
 
 

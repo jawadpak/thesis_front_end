@@ -12,7 +12,7 @@ export class GetApiDataService {
     let body = JSON.stringify(paramObject);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    const url = "http://localhost:80/nutrition_api/my_app_name/api/" + actionName;
+    const url = "http://localhost:80/thesis_rest_api/api/" + actionName;
     //const url = "http://api.github.com/search/users?q=jaw";
     return this.http.post(url, paramObject, options)
     //return this.http.get(url, options)

@@ -1,0 +1,24 @@
+<button md-icon-button [mdMenuTriggerFor]="menu">
+  <md-icon>info</md-icon>
+</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item>
+      <span>Protein : {{foodNutritionInfo.P203}}</span>
+  </button>
+  <button md-menu-item >
+    <span>FAT : {{foodNutritionInfo.P204}}</span>
+  </button>
+  <button md-menu-item>
+      <span>Carbohydrate : {{foodNutritionInfo.P205}}</span>
+  </button>
+  <button md-menu-item>
+      <span>Energy : {{foodNutritionInfo.P208}}</span>
+  </button>
+  <button md-menu-item>
+      <span>Water : {{foodNutritionInfo.P255}}</span>
+  </button>
+  <button md-menu-item>
+      <span>Iron : {{foodNutritionInfo.P303}}</span>
+  </button>
+  
+</md-menu>

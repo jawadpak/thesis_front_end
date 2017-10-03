@@ -11,16 +11,20 @@ import { ChartsModule } from 'ng2-charts';
 import { AppComponent } from './app.component';
 import { NutritionComponent } from './nutrition/nutrition.component';
 import { FoodmealComponent } from './foodmeal/foodmeal.component';
+import { PersoncardComponent } from './personcard/personcard.component';
+import { FoodnutritionComponent } from './foodnutrition/foodnutrition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NutritionComponent,
     FoodmealComponent,
+    PersoncardComponent,
+    FoodnutritionComponent,
 
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,MdButtonModule, MdCheckboxModule, HttpClientModule,HttpModule,MatGridListModule,MatIconModule,MatMenuModule,
+    BrowserModule,BrowserAnimationsModule,MdButtonModule, MdCheckboxModule, HttpClientModule,HttpModule,MatGridListModule,MatIconModule,MatMenuModule,ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

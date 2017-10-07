@@ -5,3 +5,7 @@
     opacity: 0.5;                    /* optional */
     margin: 0 15px;                  /* optional */
 }
+md-form-field input{
+  width: 160px;
+    color: black;
+}

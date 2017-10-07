@@ -12,9 +12,10 @@ export class PersoncardComponent implements OnInit {
   @Input() title: string;
   @Input() nutritionInfo: any;
   // Pie
-  public pieChartLabels: string[] = ['Protein', 'FAT', 'Carbohydrate', 'Energy', 'Water', 'Iron'];
+  /*public pieChartLabels: string[] = ['Protein', 'FAT', 'Carbohydrate', 'Energy', 'Water', 'Iron'];
+  public pieChartType: string = 'pie';*/
   public pieChartData: any = [];
-  public pieChartType: string = 'pie';
+
   constructor() { }
 
   public chart = new Chart({
@@ -65,7 +66,7 @@ export class PersoncardComponent implements OnInit {
         nut_name = "Iron";
       return nut_name;
     });
-    
+
     let temp_data = [];
     this.pieChartData = _.map(this.pieChartData, function(value, key) {
       return { name: key, y: value }

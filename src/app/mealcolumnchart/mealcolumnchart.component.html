@@ -1,0 +1,11 @@
+<md-expansion-panel>
+  <md-expansion-panel-header>
+    <md-panel-title>
+      Food Meal Column Chart
+    </md-panel-title>
+    <md-panel-description>
+      Click to View Compare Chart
+    </md-panel-description>
+  </md-expansion-panel-header>
+  <div *ngIf="chart.options.series?.length > 0" [chart]="chart"></div>
+</md-expansion-panel>

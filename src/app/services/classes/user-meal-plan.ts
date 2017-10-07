@@ -1,12 +1,13 @@
 export class UserMealPlan {
   id: number;
-  user_id : number;
-  user_plan_id : number;
-  meal_id : number;
+  user_id: number;
+  user_plan_id: number;
+  meal_id: number;
   meal_name: string;
-  meal_item_id:number;
-  tracked:boolean;
-  meal_item : object;
+  meal_item_id: number;
+  tracked: boolean;
+  meal_item: object;
+  water: number = 0;
   constructor(data: any) {
 
     this.id = data.id;

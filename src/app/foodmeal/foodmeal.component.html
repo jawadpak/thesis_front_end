@@ -1,73 +1,97 @@
-<div class="col-lg-9">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <button type="button" class="btn btn-warning btn-circle"><i class="fa fa-times"></i>
+<div class="col-lg-12" align="center">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1" align="left">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-warning btn-circle"><i class="fa fa-times"></i>
       </button>
-      <strong>{{userMealPlan.meal_name}}</strong>
-      <div class="pull-right">
-        <span class="fa fa-heart">  </span> &nbsp;
-        <span class="fa fa-pencil">  </span>
+        <strong>{{userMealPlan.meal_name}}</strong>
+        <div class="pull-right">
+          <span class="fa fa-heart">  </span> &nbsp;
+          <span class="fa fa-pencil">  </span>
+        </div>
       </div>
-    </div>
 
-    <div class="panel-body">
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th width="50%"></th>
-              <th>Qty/Ser</th>
-              <th>Unit</th>
-              <th>NutritionFact</th>
-              <th>Favourite</th>
-              <th>Change</th>
-              <th>Chart</th>
-              <th>Delete</th>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table" >
+            <thead>
+              <tr>
+                <th width="50%"></th>
+                <th>Qty/Ser</th>
+                <th>Unit</th>
+                <th>NutritionFact</th>
+                <th>Favourite</th>
+                <th>Change</th>
+                <th>Chart</th>
+                <th>Delete</th>
 
-            </tr>
-          </thead>
-          <tbody>
-            <tr align="center">
-              <td><strong>{{userMealPlan.meal_item.name | titlecase}}</strong></td>
-              <td>1</td>
-              <td>
-                <md-card>
-                  {{userMealPlan.meal_item.unit | titlecase}}</md-card>
-              </td>
-              <td>
-                <!-- <span class="fa fa-info">  </span> -->
-                <app-foodnutrition [foodNutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-foodnutrition>
+              </tr>
+            </thead>
+            <tbody>
+              <tr align="center" [ngClass]="{'alert alert-danger': userMealPlan.meal_item.child_items.length}">
+                <td><strong>{{userMealPlan.meal_item.name | titlecase}}</strong></td>
+                <td>1</td>
+                <td>
+                  <md-card>
+                    {{userMealPlan.meal_item.unit | titlecase}}</md-card>
+                </td>
+                <td>
+                  <!-- <span class="fa fa-info">  </span> -->
+                  <app-foodnutrition [foodNutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-foodnutrition>
 
-              </td>
-              <td><span class="fa fa-heart">  </span></td>
-              <td><span class="fa fa-refresh">  </span></td>
-              <td>
-                <app-personcard [title]="userMealPlan.meal_item.name | titlecase" [nutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-personcard>
-              </td>
+                </td>
+                <td><span class="fa fa-heart">  </span></td>
+                <td><span class="fa fa-refresh">  </span></td>
+                <td>
+                  <app-personcard [title]="userMealPlan.meal_item.name | titlecase" [nutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-personcard>
+                </td>
 
-              <td>
-                <md-icon>delete_forever</md-icon>
-              </td>
-            </tr>
+                <td>
+                  <md-icon>delete_forever</md-icon>
+                </td>
+              </tr>
+              <tr align="center" *ngIf="userMealPlan.meal_item.child_items">
+                <td colspan="7">
+                  <table class="table" style="padding:0px;margin:0px;">
+                    <tr align="center" *ngFor="let child_item of userMealPlan.meal_item.child_items">
+                      <td><strong>{{child_item.name | titlecase}}</strong></td>
+                      <td>1</td>
+                      <td>
+                        <md-card>
+                          {{child_item.unit | titlecase}}</md-card>
+                      </td>
+                      <td>
+                        <!-- <span class="fa fa-info">  </span> -->
+                        <app-foodnutrition [foodNutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-foodnutrition>
 
+                      </td>
+                      <td><span class="fa fa-heart">  </span></td>
+                      <td><span class="fa fa-refresh">  </span></td>
+                      <td>
+                        <app-personcard [title]="userMealPlan.meal_item.name | titlecase" [nutritionInfo]="userMealPlan.meal_item.meal_item_nutrient"></app-personcard>
+                      </td>
 
-          </tbody>
-        </table>
+                      <td>
+                        <md-icon>delete_forever</md-icon>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-    <div class="panel-footer">
-      <div class="button-row">
+      <div class="panel-footer">
+        <div class="button-row">
 
-        <button md-raised-button><md-checkbox>I Ate This</md-checkbox></button>
-        <button md-raised-button>Skip</button>
-        <button md-raised-button>Add Food</button>
-        <button md-raised-button>Create From Scratch</button>
+          <button md-raised-button><md-checkbox>I Ate This</md-checkbox></button>
+          <button md-raised-button>Skip</button>
+          <button md-raised-button>Add Food</button>
+          <button md-raised-button>Create From Scratch</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="col-lg-3" style="display: block">
-  <h1>Hello brother</h1>
-  <!-- <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"></canvas> -->
-
 </div>

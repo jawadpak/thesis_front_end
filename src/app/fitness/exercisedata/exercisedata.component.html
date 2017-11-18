@@ -1,0 +1,127 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header huge">Fitness Plan</h1>
+  </div>
+  <!-- /.col-lg-12 -->
+</div>
+<div class="row pb-5">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1">
+    <div class="col-lg-3 col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-12" align="center">
+              <div class="huge"><i class="fa  fa fa-fire"> 4655</i> cal</div>
+              <div>Calories Burn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-red">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-12" align="center">
+              <div class="huge"><i class="fa  fa fa-fighter-jet"> 4655</i></div>
+              <div>Workout Level</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-yellow">
+        <div class="panel-heading">
+          <div class="row" align="center">
+            <div class="col-xs-12">
+              <md-form-field>
+                <input mdInput [mdDatepicker]="picker" [(ngModel)]="date" placeholder="Choose a date">
+                <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+                <md-datepicker #picker></md-datepicker>
+              </md-form-field>
+            </div>
+            <div class="col-xs-12 ">
+              <strong>Fitness Date</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9 col-md-6 jumbotron">
+      <img src="./../assets/fitness-img.jpg" alt="Smiley face" width="780" height="350">
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="panel panel-red">
+          <div class="panel-heading">
+            Daily Step
+            <md-form-field class="pull-right" style="margin-top: -9px;">
+              <input mdInput [mdDatepicker]="picker1" placeholder="Choose a date">
+              <md-datepicker-toggle mdSuffix [for]="picker1"></md-datepicker-toggle>
+              <md-datepicker #picker1></md-datepicker>
+
+
+
+              <div class="btn-group">
+                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Actions
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                  <li><a href="javascript:0;" data-toggle="modal" data-target="#myModal">Add Step</a> </li>
+                </ul>
+              </div>
+            </md-form-field>
+          </div>
+          <div class="panel-body">
+            <div class="well">Today's Steps Goals: 10,000 steps</div>
+            <div *ngIf="chart.options.series?.length > 0" [chart]="chart"></div>
+          </div>
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+      <div class="col-lg-6">
+        <div class="panel panel-red">
+          <div class="panel-heading">
+            Daily Exercise
+            <md-form-field class="pull-right" style="margin-top: -9px;">
+              <input mdInput [mdDatepicker]="picker4" placeholder="Choose a date">
+              <md-datepicker-toggle mdSuffix [for]="picker4"></md-datepicker-toggle>
+              <md-datepicker #picker4></md-datepicker>
+              </md-form-field>
+          </div>
+          <div class="panel-body">
+            <div class="well">Daily exercise calories burn</div>
+            <div *ngIf="chart1.options.series?.length > 0" [chart]="chart1"></div>
+          </div>
+
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+    </div>
+  </div>
+  <div class="modal " id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Add Step</h4>
+        </div>
+        <div class="modal-body" >
+          <md-form-field class="pull-right" style="margin-top: -9px;">
+            Step Date :
+            <input mdInput [mdDatepicker]="picker3" placeholder="Choose a date">
+            <md-datepicker-toggle mdSuffix [for]="picker3"></md-datepicker-toggle>
+            <md-datepicker #picker3 ></md-datepicker>
+          </md-form-field>
+            Daily Step's <input type="number" />
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+</div>

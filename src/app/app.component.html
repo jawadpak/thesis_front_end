@@ -1,19 +1,17 @@
 <div id="wrapper">
-
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-      <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
-      
+      <a class="navbar-brand" href="#" ><b class="text-danger">Nutrition Fitness App</b></a>
+      <ul class="nav navbar-nav">
+        <li [routerLinkActive]="['active']"><a routerLink="/dashboard"><b class="text-danger">Dashboard </b></a></li>
+        <li [routerLinkActive]="['active']"><a routerLink="/nutrition-data"><b class="text-danger">Nutrition</b></a></li>
+        <li [routerLinkActive]="['active']"><a routerLink="/recipes"><b class="text-danger">Recipes</b></a></li>
+        <li [routerLinkActive]="['active']"><a routerLink="/fitness-exercise"><b class="text-danger">Fitness</b></a></li>
+        <li [routerLinkActive]="['active']"><a routerLink="/message"><b class="text-danger">Message</b></a></li>
+      </ul>
     </div>
     <!-- /.navbar-header -->
-
     <ul class="nav navbar-top-links navbar-right">
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -223,17 +221,14 @@
       <!-- /.dropdown -->
     </ul>
     <!-- /.navbar-top-links -->
-
-
     <!-- /.navbar-static-side -->
   </nav>
-
   <div id="page-wrapper">
-
     <!-- /.row -->
     <div class="row">
       <div class="col-lg-12">
-        <app-nutrition></app-nutrition>
+        <router-outlet></router-outlet>
+        <!-- <app-nutrition></app-nutrition> -->
       </div>
     </div>
 

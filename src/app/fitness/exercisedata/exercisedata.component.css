@@ -1,0 +1,9 @@
+.panel-yellow > .panel-heading,.md-form-field input{
+  width: 240px;
+    color: black;
+}
+
+.mat-calendar {
+    display: block;
+    z-index: 12000;
+}

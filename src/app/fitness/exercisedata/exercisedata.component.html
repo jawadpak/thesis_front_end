@@ -85,7 +85,7 @@
               <input mdInput [mdDatepicker]="picker4" placeholder="Choose a date">
               <md-datepicker-toggle mdSuffix [for]="picker4"></md-datepicker-toggle>
               <md-datepicker #picker4></md-datepicker>
-              </md-form-field>
+            </md-form-field>
           </div>
           <div class="panel-body">
             <div class="well">Daily exercise calories burn</div>
@@ -102,16 +102,39 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Add Step</h4>
+          <h4 class="modal-title" id="myModalLabel">Add Exercise</h4>
         </div>
-        <div class="modal-body" >
-          <md-form-field class="pull-right" style="margin-top: -9px;">
-            Step Date :
+        <div class="modal-body">
+          <div class="form-group" align="center">
+          <md-form-field  style="margin-top: -9px;">
+            <label>Exercise Date</label>
             <input mdInput [mdDatepicker]="picker3" placeholder="Choose a date">
             <md-datepicker-toggle mdSuffix [for]="picker3"></md-datepicker-toggle>
-            <md-datepicker #picker3 ></md-datepicker>
+            <md-datepicker #picker3></md-datepicker>
           </md-form-field>
-            Daily Step's <input type="number" />
+        </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Exercise Name</label>
+                <select class="form-control">
+                                                <option>Cycling, mountain bike, bmx</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Exercise Time (Min)</label>
+                <input type="number" />
+              </div>
+            </div>
+          </div>
+
+
 
         </div>
         <div class="modal-footer">

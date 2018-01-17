@@ -12,7 +12,11 @@ export class RecipefoodComponent implements OnInit {
   constructor(private getApiDataService: GetApiDataService) { }
   public recipes_list: object = [];
   public water: number = 0;
-
+  public recipeObj:object = {};
+  openRecipe(recipe){
+    this.recipeObj = recipe;
+    console.log(recipe);
+  }
   ngOnInit() {
     this.getApiDataService.getData("users/getRecipeData.json", {})
       .subscribe(

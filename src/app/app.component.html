@@ -6,9 +6,33 @@
       <ul class="nav navbar-nav">
         <li [routerLinkActive]="['active']"><a routerLink="/dashboard"><b class="text-danger">Dashboard </b></a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/nutrition-data"><b class="text-danger">Nutrition</b></a></li>
-        <li [routerLinkActive]="['active']"><a routerLink="/recipes"><b class="text-danger">Recipes</b></a></li>
+        <li class="dropdown ">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true" >
+                        <b class="text-danger"> Recipes</b> <i class="fa fa-caret-down"></i>
+                    </a>
+          <ul class="dropdown-menu dropdown-alerts">
+            <li>
+              <a routerLink="/recipes" >
+                <div>
+                  <i class="fa fa-eye fa-fw"></i> <b class="text-danger"> View Recipes</b>
+                </div>
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a routerLink="/create-recipe">
+                <div>
+                  <i class="fa fa-twitter fa-fw"></i><b class="text-danger"> Create Recipe</b>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.dropdown-alerts -->
+        </li>
+        <!-- <li [routerLinkActive]="['active']"><a routerLink="/recipes"><b class="text-danger">Recipes</b></a></li> -->
         <li [routerLinkActive]="['active']"><a routerLink="/fitness-exercise"><b class="text-danger">Fitness</b></a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/message"><b class="text-danger">Message</b></a></li>
+
       </ul>
     </div>
     <!-- /.navbar-header -->

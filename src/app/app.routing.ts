@@ -8,6 +8,7 @@ import { ExercisedataComponent } from './fitness/exercisedata/exercisedata.compo
 import { NutritionComponent } from './nutrition/nutrition.component';
 import { ChatComponent } from './message/chat/chat.component';
 import { RecipefoodComponent } from './recipes/recipefood/recipefood.component';
+import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 
 // import { UserProfileComponent } from './user-profile/user-profile.component';
 // import { TableListComponent } from './table-list/table-list.component';
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path: 'nutrition-data', component: NutritionComponent },
   { path: 'message',   component: ChatComponent },
   { path: 'recipes',   component: RecipefoodComponent },
+  { path: 'create-recipe',   component: CreateRecipeComponent },
+
   // { path: 'table-list',     component: TableListComponent },
   // { path: 'typography',     component: TypographyComponent },
   // { path: 'icons',          component: IconsComponent },

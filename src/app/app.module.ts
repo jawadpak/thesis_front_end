@@ -26,6 +26,7 @@ import { ExercisedataComponent } from './fitness/exercisedata/exercisedata.compo
 import { MainpageComponent } from './dashboard/mainpage/mainpage.component';
 import { ChatComponent } from './message/chat/chat.component';
 import { RecipefoodComponent } from './recipes/recipefood/recipefood.component';
+import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 
 
 
@@ -42,6 +43,7 @@ import { RecipefoodComponent } from './recipes/recipefood/recipefood.component';
     MainpageComponent,
     ChatComponent,
     RecipefoodComponent,
+    CreateRecipeComponent,
   ],
   exports:[MdDatepicker,MatSidenavModule],
   imports: [

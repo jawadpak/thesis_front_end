@@ -9,6 +9,8 @@ import { NutritionComponent } from './nutrition/nutrition.component';
 import { ChatComponent } from './message/chat/chat.component';
 import { RecipefoodComponent } from './recipes/recipefood/recipefood.component';
 import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
+import { CoachmemberlistComponent } from './coachmemberlist/coachmemberlist.component';
+import { CoachuserviewComponent } from './coachuserview/coachuserview.component';
 
 // import { UserProfileComponent } from './user-profile/user-profile.component';
 // import { TableListComponent } from './table-list/table-list.component';
@@ -25,8 +27,9 @@ const routes: Routes = [
   { path: 'message',   component: ChatComponent },
   { path: 'recipes',   component: RecipefoodComponent },
   { path: 'create-recipe',   component: CreateRecipeComponent },
+  { path: 'coach-memberlist',     component: CoachmemberlistComponent },
+  { path: 'coach-user-view',     component: CoachuserviewComponent },
 
-  // { path: 'table-list',     component: TableListComponent },
   // { path: 'typography',     component: TypographyComponent },
   // { path: 'icons',          component: IconsComponent },
   // { path: 'maps',           component: MapsComponent },

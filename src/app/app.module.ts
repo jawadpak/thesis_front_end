@@ -28,6 +28,7 @@ import { ChatComponent } from './message/chat/chat.component';
 import { RecipefoodComponent } from './recipes/recipefood/recipefood.component';
 import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 import { CoachmemberlistComponent } from './coachmemberlist/coachmemberlist.component';
+import { CoachuserviewComponent } from './coachuserview/coachuserview.component';
 
 
 
@@ -46,6 +47,7 @@ import { CoachmemberlistComponent } from './coachmemberlist/coachmemberlist.comp
     RecipefoodComponent,
     CreateRecipeComponent,
     CoachmemberlistComponent,
+    CoachuserviewComponent,
   ],
   exports:[MdDatepicker,MatSidenavModule],
   imports: [
